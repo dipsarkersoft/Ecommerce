@@ -11,8 +11,9 @@ import { DeleteProduct } from "../../components/Helper/Helper";
 const Products = () => {
 
      const url=process.env.REACT_APP_API
+     
      const navigate=useNavigate()
-     const BaseUrl= url+"/photo/"
+     const BaseUrl= "https://rose-important-agouti.cyclic.app/api/v1"+"/photo/"
      const [Product, setProducts] = useState([]);
       
         const DeletePostItem=(id)=>{
