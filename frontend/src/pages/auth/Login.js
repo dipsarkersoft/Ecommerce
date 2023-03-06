@@ -32,7 +32,7 @@ const handleSubmit=async(e)=>{
     localStorage.setItem("auth", JSON.stringify(data));
     setAuth({...auth,token:data.token,User:data.User})
     toast.success("Login successful")
-    navigate( location.state||`/dashboard/${data?.User?.role ===1 ? "admin" :"user"}`)
+    navigate( location.state||`/dashboard/${data?.User?.role ===1 ? "admin" :"User"}`)
     
     }
   }
