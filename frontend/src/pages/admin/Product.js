@@ -11,7 +11,7 @@ import { DeleteProduct } from "../../components/Helper/Helper";
 const Products = () => {
 
      const navigate=useNavigate()
-     const BaseUrl="http://localhost:8000/api/v1/photo/"
+     const BaseUrl= `${process.env.REACT_APP_API}"/photo/"`
      const [Product, setProducts] = useState([]);
       
         const DeletePostItem=(id)=>{
