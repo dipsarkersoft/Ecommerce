@@ -1,7 +1,8 @@
 
 const express =require("express");
 const { create, read,photo, deleteProduct,updateProduct, productsCount, 
-     listProducts, productsSearch, relatedProducts, filteredProducts, readAllProducts, processPayment, getToken}
+     listProducts, productsSearch, relatedProducts, filteredProducts, readAllProducts,
+      processPayment, getToken}
       = require("../controllers/product.js");
 const formidable=require("express-formidable")
 const router = express.Router();
@@ -24,7 +25,7 @@ router.get("/relatedProducts/:productId/:categoryId",relatedProducts)
 router.post("/filteredProducts", filteredProducts)
 
 
-router.get("/braintree/token", getToken);
+router.get("/braintree/token",isUsers, getToken);
 router.post("/braintree/payment", isUsers, processPayment);
 //router.put("/order-status/:orderId", isUsers, isAdmin, orderStatus)
 

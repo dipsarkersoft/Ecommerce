@@ -100,59 +100,6 @@ exports.readAllProducts= async (req, res) => {
 
 
 
-
-// exports.updateProduct = async (req, res) => {
-//   try {
-  
-//     const { name, description, price, Category, quantity, shipping } =req.fields;
-//     const { photo } = req.files;
-  
-//     switch (true) {
-//       case !name?.trim():
-//       return  res.json({ error: "Name is required" });
-//       case !description?.trim():
-//       return  res.json({ error: "Description is required" });
-//       case !price?.trim():
-//       return  res.json({ error: "Price is required" });
-//       case !Category?.trim():
-//       return  res.json({ error: "Category is required" });
-//       case !quantity?.trim():
-//       return  res.json({ error: "Quantity is required" });
-//       case !shipping?.trim():
-//       return  res.json({ error: "Shipping is required" });
-      
-//       case photo && photo.size > 1000000:
-//         return res
-//           .status(500)
-//           .send({ error: "photo is Required and should be less then 1mb" })
-//     }
-
-//     const products = await Product.findByIdAndUpdate(
-//       req.params.pid,
-//       { ...req.fields, slug: slugify(name) },
-//       { new: true }
-//     );
-//     if (photo) {
-//       products.photo.data = fs.readFileSync(photo.path);
-//       products.photo.contentType = photo.type;
-//     }
-
-//     await products.save();
-//     res.status(200).json({
-//       status:"sucess",
-//        products
-//     });
-//    } catch (err) {
-//     console.log(err)
-  
-//       res.status(400).json({
-//       status:"failed"
-//      });
-//    }
-// };
-
-
-
 exports.updateProduct = async (req, res) => {
   try {
    
@@ -377,14 +324,14 @@ exports.getToken = async (req, res) => {
 
 exports.processPayment = async (req, res) => {
   try {
-    // console.log(req.body);
+   
     const { nonce, cart } = req.body;
 
     let total = 0;
     [cart].map((i) => {
       total += i.price;
     });
-    // console.log("total => ", total);
+    
 
     let newTransaction = gateway.transaction.sale(
       {
