@@ -352,8 +352,8 @@ exports.processPayment = async (req, res) => {
           decrementQuantity(cart);
           res.json({ ok: true });
         } else {
-          res.status(500).send(error);
-        }
+          res.status(500).send(error);}
+      
       }
     );
   } catch (err) {
