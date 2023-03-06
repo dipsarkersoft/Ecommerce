@@ -10,7 +10,6 @@ import { DeleteProduct } from "../../components/Helper/Helper";
 
 const Products = () => {
 
-     const url=process.env.REACT_APP_API
      
      const navigate=useNavigate()
      const BaseUrl= "https://rose-important-agouti.cyclic.app/api/v1"+"/photo/"
