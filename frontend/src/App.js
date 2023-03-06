@@ -15,7 +15,6 @@ import AdminProduct from './pages/admin/CreateProduct'
 import Products from './pages/admin/Product';
 import UpdateProduct from './pages/admin/UpdateProduct';
 import ReadProduct from './pages/ReadProduct';
-
 import SearchValue from './pages/SearchValue';
 import CartPage from './pages/Cartpage';
 import UpdateProfile from './pages/UpdateProfile';
@@ -30,9 +29,6 @@ const PageNotFound = () => {
     </div>
   )
 }
-
-
-
 
 
 const App = () => {

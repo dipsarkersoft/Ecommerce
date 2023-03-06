@@ -1,5 +1,5 @@
 {
-  "name": "ecom_client",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,13 +16,13 @@
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.6.2",
-    "react-scripts": "5.0.1",
-    "sweetalert2": "^11.7.3",
+    "react-scripts": "^5.0.1",
+    "sweetalert2": "^11.4.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"http://localhost:8000/"
+  "proxy": "https://rose-important-agouti.cyclic.app/"
 }

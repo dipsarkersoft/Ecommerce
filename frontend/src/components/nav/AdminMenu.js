@@ -34,8 +34,7 @@ const AdminMenu = () => {
      </li>
      <li>
           <NavLink className="list-group-item" to="/dashboard/admin/update">
-              Product list
-
+              Profile
           </NavLink>
      </li>
     </ul>
