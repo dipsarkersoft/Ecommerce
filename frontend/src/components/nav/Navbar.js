@@ -101,7 +101,7 @@ const Navbar = () => {
                       <li>
                         <NavLink
                           to={`/dashboard/${
-                            auth?.User?.role === 1 ? "admin" : "  User"
+                            auth?.User?.role === 1 ? "admin" : "User"
                           }`}
                           className="dropdown-item"
                         >
